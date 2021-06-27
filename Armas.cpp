@@ -1,4 +1,9 @@
-#include "armas.h"
+#include "Armas.h"
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5888730300af265f1beb5b9209130988f3107014
+#include "personagem.cpp"
 
 Arma::Arma(string nomeArma){
     srand(time(0));
