@@ -1,4 +1,4 @@
-#include "arma.h"
+#include "armas.h"
 
 Arma::Arma(string nomeArma){
     srand(time(0));
