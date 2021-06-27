@@ -18,4 +18,4 @@ class Arma{
         Arma(string nomeArma);
         int caculaDano;
         ~Arma;
-}
+};
