@@ -70,7 +70,7 @@ int Personagem::recebeDanoDeMagia(int dano){
 
 int Personagem::ataqueArma(){
     
-    int danDaArma = 0;
+    int danoDaArma = 0;
     return danoDaArma + (danoDaArma * (this->forca/100));
     
     

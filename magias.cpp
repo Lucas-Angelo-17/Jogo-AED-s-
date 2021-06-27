@@ -4,6 +4,7 @@
 Magia::Magia(string nomeMagia){
     this->nome = nomeMagia;
 }
-int Magia::danoMagia(){
 
+int Magia::calculaDanoMagia(){
+    if (nome == '')
 }
