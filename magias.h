@@ -14,5 +14,6 @@ class Magia{
         int calculaDanoMagia();
         int calculaCuraMagia();
         int calculaGastoMana();
+        int ganhaMana();
         ~Magia;
 };
