@@ -5,65 +5,125 @@ Magia::Magia(string nomeMagia){
     this->nome = nomeMagia;
 }
 
+void lista1(Personagem *player1, Personagem *player2, int personagem1){
+    int magia;
+    switch(personagem1){
+        case 1:
+            cout << "Escolha a Magia: " << "\n" << "1-Tempestade" << "\n";
+            cin >> magia;
+            switch(magia){
+                case 1:
 
+                    break;
+                default:
+                    cout << "Opção inválida" << "\n";
+                    break;
+            }
+            break;
+        case 2:
+            cout << "Escolha a Magia: " << "\n" << "1-Intoxicação" << "\n";
+            cin >> magia;
+            switch(magia){
+                case 1:
+                
+                    break;
+                default:
+                    cout << "Opção inválida" << "\n";
+                    break;
+            }
+            break;
+        case 3:
+            cout << "Escolha a Magia: " << "\n" << "1-Poção da Vida" << "\n" << "2-Bio" << "\n" << "3-Cura" << "\n" << "4-Intoxicação" << "\n" << "5-Tempestade" << "\n";
+            cin >> magia;
+            switch(magia){
+                case 1:
+                
+                    break;
+                case 2:
+                
+                    break;
+                case 3:
+                
+                    break;
+                case 4:
+                
+                    break;
+                case 5:
+                
+                    break;
+                default:
+                    cout << "Opção inválida" << "\n";
+                    break;
+            }
+            break;
+        case 4:
+            cout << "Escolha a Magia: " << "\n" << "1-Poção da Vida" << "\n" << "2-Flama Gelada" << "\n" << "3-Tempestade" << "\n";
+            cin >> magia;
+            switch(magia){
+                case 1:
+                
+                    break;
+                case 2:
+                
+                    break;
+                case 3:
+                
+                    break;
+                default:
+                    cout << "Opção inválida" << "\n";
+                    break;
+            }
+            break;
+        case 5:
+            cout << "Escolha a Magia: " << "\n" << "1-Bio" << "\n";
+            cin >> magia;
+            switch(magia){
+                case 1:
+                
+                    break;
+                default:
+                    cout << "Opção inválida" << "\n";
+                    break;
+            }
+            break;
+        case 6:
+            cout << "Escolha a Magia: " << "\n" << "1-Intoxicação" << "\n";
+            cin >> magia;
+            switch(magia){
+                case 1:
+                
+                    break;
+                default:
+                    cout << "Opção inválida" << "\n";
+                    break;
+            }
+            break;
+        case 7:
+            cout << "Escolha a Magia: " << "\n" << "1-Hálito de Fogo" << "\n" << "2-Flama Gelada" << "\n";
+            cin >> magia;
+            switch(magia){
+                case 1:
 
-int Magia::calculaDanoMagia(){
-    if (nome == "Poção da Vida"){
-        return 0;
+                    break;
+                case 2:
+
+                    break;
+                default:
+                    cout << "Opção inválida" << "\n";
+                    break;
+            }
+            break;
+        case 8:
+            cout << "Escolha a Magia: " << "\n" << "1-Intoxicação" << "\n";
+            cin >> magia;
+            switch(magia){
+                case 1:
+                    
+                    break;
+                default:
+                    cout << "Opção inválida" << "\n";
+                    break;
+            }
+            break;
     }
-    else if(nome == "Cura"){
-        return 0;
-    }
-    else if(nome == "Hálito de Fogo"){
-        return 400;
-    }
-    else if(nome == "Bio"){
-        return 360;
-    }
-    else if(nome == "Flama Gelada"){
-        return 320;
-    }
-    else if(nome == "Intoxicação"){
-        return 280;
-    }
-    else if(nome == "Tempestade"){
-        return 200;
-    }
-}
-int Magia::calculaCuraMagia(){
-    if (nome == "Poção da Vida"){
-        return 200;
-    }
-    else if(nome == "Cura"){
-        return 400;
-    }
-    else{
-        return 0;
-    }
-}
-int Magia::calculaGastoMana(){
-    if (nome == "Poção da Vida"){
-        return 12;
-    }
-    else if(nome == "Cura"){
-        return 16;
-    }
-    else if(nome == "Hálito de Fogo"){
-        return 12;
-    }
-    else if(nome == "Bio"){
-        return 14;
-    }
-    else if(nome == "Flama Gelada"){
-        return 14;
-    }
-    else if(nome == "Intoxicação"){
-        return 12;
-    }
-    else if(nome == "Tempestade"){
-        return 12;
-    }
-}
-int Magia::ganhaMana(){
-    
 }
