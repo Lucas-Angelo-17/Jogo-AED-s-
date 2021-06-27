@@ -13,7 +13,7 @@ class Personagem{
     int vida;
     int mana;
     int forca;
-    int magia;
+    int magica;
     int armadura;
     int resistencia;
     int agilidade;
@@ -24,10 +24,14 @@ class Personagem{
     public:
     Personagem(string classePersonagem);
     int ataqueArma();
-    int ataqueMagia();
+    int ataqueMagia(int dano);
     int recebeDanoDeArma(int dano);
     int recebeDanoDeMagia(int dano);
     int verificaVida();
+    void regeneraMana();
+    void regeneraVida(int regen);
+    void gastaMana(int gasta);
+    int verificaMana();
     ~Personagem();
     
 };

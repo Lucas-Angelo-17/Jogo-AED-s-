@@ -10,7 +10,7 @@ Personagem::Personagem(string classePersonagem){
     this->vida = atributos[0];
     this->mana = atributos[1];
     this->forca = atributos[2];
-    this->magia = atributos[3];
+    this->magica = atributos[3];
     this->armadura = atributos[4];
     this->resistencia = atributos[5];
     this->agilidade = atributos[6];
@@ -72,8 +72,10 @@ int Personagem::ataqueArma(){
     
     int danoDaArma = 0;
     return danoDaArma + (danoDaArma * (this->forca/100));
-    
-    
+}
+
+int Personagem::ataqueMagia(int dano){
+    return dano + (dano * (this->magica));
 }
 
 int Personagem::verificaVida(){
@@ -81,5 +83,22 @@ int Personagem::verificaVida(){
 }
 
 Personagem::~Personagem(){
-    cout << "\n*** Destroi os dados de personagem ***\n"
+    cout << "\n*** Destroi os dados de personagem ***\n";
+}
+
+
+void Personagem::regeneraMana(){
+    this->mana += 10;
+}
+
+int Personagem::verificaMana(){
+    return this->mana;
+}
+
+void Personagem::gastaMana(int gasta){
+    this->mana -= gasta;
+}
+
+void Personagem::regeneraVida(int regen){
+    this->vida += vida;
 }

@@ -6,14 +6,11 @@
 
 using namespace std;
 
-class Magia{
-    private:
-        string nome;
+class Magia
+{
     public:
-        Magia(string nomeMagia);
-        int calculaDanoMagia();
-        int calculaCuraMagia();
-        int calculaGastoMana();
-        int ganhaMana();
-        ~Magia;
+    string nome;
+    int dano;
+    int cura;
+    int gastoMana;
 };
