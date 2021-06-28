@@ -12,26 +12,18 @@ using namespace std;
 //Estado Atual do Player1
 void statusplayer1(Personagem *player1)
 {
-    printf("\nStatus do Player 1\n");
+    printf("\n\nStatus do Player 1\n");
     cout << "Classe:" << player1->nome << "\n";
     printf("Vida Atual:%d\n", player1->vida);
-    printf("Mana Atual:%d\n", player1->mana);
+    printf("Mana Atual:%d\n\n", player1->mana);
 }
 //Estado Atual do Player2
 void statusplayer2(Personagem *player2)
 {
-    printf("\nStatus do Player 2\n");
+    printf("\n\nStatus do Player 2\n");
     cout << "Classe:" << player2->nome << "\n";
     printf("Vida Atual:%d\n", player2->vida);
-    printf("Mana Atual:%d\n", player2->mana);
-}
-
-int funcionalidade(Personagem *p1, Personagem *p2, int p1_personagem, int p2_personagem){
-
-player2->recebeDanoDeArma(player1->ataqueArma());
-
-if(player2->verificaVida()==0)
-cout << "Morreu";
+    printf("Mana Atual:%d\n\n", player2->mana);
 }
 
 int main() {
@@ -208,12 +200,13 @@ int main() {
         }
         else{cout << "Opção inválida\n";}
         if(aux1 != 2){
-            cout << "Sua mana está regenerando\n";
+            cout << "Recuperou 10 de mana\n";
             player1->regeneraMana();
         }
+       
+        cout << statusplayer1 << statusplayer2;
 
-
-        cout << "\n\nPlayer 1\n1-Usar arma\n";
+        cout << "\n\nPlayer 2\n1-Usar arma\n";
         cout << "2-Usar magia";
         if(player2->mana == 0){
             cout << " (indisponivel)\n";
@@ -271,6 +264,7 @@ int main() {
             cout << "Recuperou 10 de mana\n";
             player2->regeneraMana();
         }
+        cout << statusplayer1 << statusplayer2;
         if(player2->vida == 0){
             cout << "\nGANHADOR!\n----------------\nJogador 1\n----------------\n";
         }
