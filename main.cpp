@@ -26,7 +26,7 @@ void statusplayer2(Personagem *player2)
     printf("Mana Atual:%d\n\n", player2->mana);
 }
 
-int main {
+int main() {
     //Intodução
     printf("Role Play Game -Classic- \n");
     printf ("****************************\n");
@@ -167,7 +167,7 @@ int main {
         else if(aux1 == 3){
             cout << "Selecione a arma\n";
             Arsenal(player1, personagem1);
-        }1
+        }
         else if(aux1 == 4){
             printf("*Use com sabedoria o Voto Solene De Bul Khatos*");
             player2->recebeDanoDeArma(player1->calculadadoBulKhatos());
