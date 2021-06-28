@@ -101,7 +101,7 @@ int main {
         printf("Opção inválida\n");
         break;
     }
-    }while(personagem1 <= 0 || 8 < personagem1)
+    }while(personagem1 <= 0 || 8 < personagem1);
 
     do{
     printf("\nPersonagem do Jogador 2: ");
@@ -145,7 +145,7 @@ int main {
         printf("Opção inválida\n");
         break;
     }
-    }while(personagem2 <= 0 || 8 < personagem2)
+    }while(personagem2 <= 0 || 8 < personagem2);
 
     funcionalidade(player1, player2, personagem1, personagem2);
 }
