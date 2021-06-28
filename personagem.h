@@ -8,29 +8,31 @@
 using namespace std;
 class Personagem{
     public:
-    string classe;
-    string nome;
-    int vida;
-    int mana;
-    int forca;
-    int magica;
-    int armadura;
-    int resistencia;
-    int agilidade;
-    Arma *arma;
-    Magia *magia;
-    int calculaEsquiva ();
+        string classe;
+        string nome;
+        int vida;
+        int mana;
+        int maxmana;
+        int maxvida;
+        int forca;
+        int magica;
+        int armadura;
+        int resistencia;
+        int agilidade;
+        Arma *arma;
+        Magia *magica;
 
-    Personagem(string classePersonagem);
-    int ataqueArma();
-    int ataqueMagia(int dano);
-    int recebeDanoDeArma(int dano);
-    int recebeDanoDeMagia(int dano);
-    int verificaVida();
-    void regeneraMana();
-    void regeneraVida(int regen);
-    void gastaMana(int gasta);
-    int verificaMana();
-    ~Personagem();
+        Personagem(string classePersonagem);
+        int calculaEsquiva ();
+        int ataqueArma();
+        int ataqueMagia(int dano);
+        int recebeDanoDeArma(int dano);
+        int recebeDanoDeMagia(int dano);
+        int verificaVida();
+        void regeneraMana();
+        void regeneraVida(int regen);
+        void gastaMana(int gasta);
+        int verificaMana();
+        ~Personagem();
     
 };

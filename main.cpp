@@ -6,6 +6,7 @@
 #include "accessdata.h"
 #include "personagem.h"
 #include "magias.cpp"
+#include "BancoDeDados.h"
 
 using namespace std;
 
