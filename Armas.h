@@ -18,8 +18,6 @@ class Arma
     
     int danoMin;
     int danoMax;
-    float chanceDeAcertoCritico;
-    float danoDeAcertoCritico;
 };
 class Garra_Letal : public Arma
 {

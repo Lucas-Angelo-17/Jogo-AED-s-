@@ -87,8 +87,14 @@ Personagem::~Personagem(){
 }
 
 Personagem::calculadadoBulKhatos(){
+    if(criticoBulKhatos());
+        return 0;
 
-    return (500 + (rand() %(900 - 500 + 1)));
+    float danoBulKhatos = (500 + (rand() %(900 - 500 + 1)));
+
+    else
+
+    danoBulKhatos = (500 + ((rand() %(400))*2));
 
 }
 
