@@ -1,5 +1,5 @@
 #include "personagem.h"
-
+#include "BancoDeDados.h"
 Personagem::Personagem(string classePersonagem){
     
     srand(time(0));
