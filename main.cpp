@@ -181,29 +181,29 @@ int main() {
             player2->recebeDanoLendario(player1->ataquelendario());
             switch(personagem1){
                 case 1:
-                player1->arma = new Porrete();
-                break;
+                    player1->arma = new Porrete();
+                    break;
                 case 2:
-                player1->arma = new Cajado();
-                break;
+                    player1->arma = new Cajado();
+                    break;
                 case 3:
-                player1->arma = new Cajado();
-                break;
+                    player1->arma = new Cajado();
+                    break;
                 case 4:
-                player1->arma = new Besta();
-                break;
+                    player1->arma = new Besta();
+                    break;
                 case 5:
-                player1->arma = new Garra_Letal();
-                break;
+                    player1->arma = new Garra_Letal();
+                    break;
                 case 6:
-                player1->arma = new Cajado();
-                break;
+                    player1->arma = new Cajado();
+                    break;
                 case 7:
-                player1->arma = new Garra_Letal();
-                break;
+                    player1->arma = new Garra_Letal();
+                    break;
                 case 8:
-                player1->arma = new Cajado();
-                break;
+                    player1->arma = new Cajado();
+                    break;
             }
         }
         else{cout << "Opção inválida\n";}
@@ -241,29 +241,29 @@ int main() {
             player1->recebeDanoLendario(player2->ataquelendario());
             switch(personagem2){
                 case 1:
-                player2->arma = new Porrete();
-                break;
+                    player2->arma = new Porrete();
+                    break;
                 case 2:
-                player2->arma = new Cajado();
-                break;
+                    player2->arma = new Cajado();
+                    break;
                 case 3:
-                player2->arma = new Cajado();
-                break;
+                    player2->arma = new Cajado();
+                    break;
                 case 4:
-                player2->arma = new Besta();
-                break;
+                    player2->arma = new Besta();
+                    break;
                 case 5:
-                player2->arma = new Garra_Letal();
-                break;
+                    player2->arma = new Garra_Letal();
+                    break;
                 case 6:
-                player2->arma = new Cajado();
-                break;
+                    player2->arma = new Cajado();
+                    break;
                 case 7:
-                player2->arma = new Garra_Letal();
-                break;
+                    player2->arma = new Garra_Letal();
+                    break;
                 case 8:
-                player2->arma = new Cajado();
-                break;
+                    player2->arma = new Cajado();
+                    break;
             }
         }
         else{cout << "Opção inválida\n";}
