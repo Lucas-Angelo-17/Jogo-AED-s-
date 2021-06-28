@@ -4,7 +4,6 @@
 
 #include <string.h>
 #include "accessdata.h"
-#include "personagem.h"
 #include "magias.cpp"
 #include "BancoDeDados.h"
 
@@ -84,7 +83,7 @@ int main() {
         break;
     case 7:
         printf("*Dagrão*\n");
-        player1 = new Dagrao();
+        player1 = new Dragao();
         break;
     case 8:
         printf("*Zumbi*\n");
@@ -128,7 +127,7 @@ int main() {
         break;
     case 7:
         printf("*Dagrão*\n");
-        player2 = new Dagrao();
+        player2 = new Dragao();
         break;
     case 8:
         printf("*Zumbi*\n");
