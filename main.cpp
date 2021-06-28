@@ -274,10 +274,6 @@ int main() {
     }
     while(player1->vida != 0 || player2->vida != 0);
 
-
-
-    funcionalidade(player1, player2, personagem1, personagem2);
-
     //quando a vida de um deles chegar a zero
     cout << "\n\nGame over?" << "\n\n" << "RAAAAAWRM" << "\n-Um dragao celestial aparece-";
     
