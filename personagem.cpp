@@ -60,10 +60,6 @@ int Personagem::verificaVida(){
     return this->vida;
 }
 
-int Personagem::~Personagem(){
-    cout << "\n*** Destroi os dados de personagem ***\n";
-}
-
 int Personagem::calculadadoBulKhatos(){
     float danoBulKhatos;
     if(criticoBulKhatos()==0){

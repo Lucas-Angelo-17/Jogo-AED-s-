@@ -246,7 +246,7 @@ void Arsenal2(Personagem *player2, int personagem2){
         switch(a){
 
             case 1:
-            player1->arma = new Tridente_Sagrado();
+            player2->arma = new Tridente_Sagrado();
             cout << "Nova arma: Tridente Sagrado\n";
             break;
 
@@ -461,9 +461,7 @@ int main(){
             cout << " (indisponivel)\n";
         }
         cout << "3-Trocar de arma\n";
-        if(player1->*********** == 1){ //chance arma especial
-            cout << "4-Usar Voto Solene de Bul-Kathos\n";
-        }
+        cout << "4-Usar Voto Solene de Bul-Kathos\n";
         cout << "Escolha a sua ação: ";
         cin >> aux1;
         if(aux1 == 1){
@@ -479,10 +477,17 @@ int main(){
             Arsenal(player1, personagem1);
         }
         else if(aux1 == 4){
-            printf("*Use com sabedoria o Voto Solene De Bul Khatos*");
-            player2->recebeDanoDeArma(player1->calculadadoBulKhatos());
+            if(rand() % 2 == 0){
+                printf("*Use Bul Khatos*");
+                player2->recebeDanoDeArma(player1->calculadadoBulKhatos());
+            }
+            else{
+                cout << "Nao conseguiu usar a arma";
+            }
         }
-        else{cout << "Opção inválida\n";}
+        else{
+            cout << "Opção inválida\n";
+        }
         if(aux1 != 2){
             cout << "Recuperou 10 de mana\n";
             player1->regeneraMana();
@@ -496,9 +501,6 @@ int main(){
             cout << " (indisponivel)\n";
         }
         cout << "3-Trocar de arma\n";
-        if(player2->******** == 1){
-            cout << "4-Usar Voto Solene de Bul-Kathos\n";
-        }
         cout << "Escolha a sua ação: ";
         cin >> aux2;
         if(aux2 == 1){
@@ -514,8 +516,14 @@ int main(){
             Arsenal2(player2, personagem2);
         }
         else if(aux2 == 4){
-            printf("*Use com sabedoria o Voto Solene De Bul Khatos*");
-            player1->recebeDanoDeArma(player2->calculadadoBulKhatos());
+            printf("*Use Bul Khatos*");
+            if(rand() % 2 == 0){
+                printf("*Use Bul Khatos*");
+                player1->recebeDanoDeArma(player2->calculadadoBulKhatos());
+            }
+            else{
+                cout << "Nao conseguiu usar a arma";
+            }
         }
         else{cout << "Opção inválida\n";}
         if(aux2 != 2){
