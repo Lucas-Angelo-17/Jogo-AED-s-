@@ -5,6 +5,7 @@
 #include <string.h>
 #include "accessdata.h"
 #include "personagem.h"
+#include "magias.cpp"
 
 using namespace std;
 
@@ -146,6 +147,140 @@ int main() {
         break;
     }
     }while(personagem2 <= 0 || 8 < personagem2);
+
+    int aux1, aux2;
+    do{
+        aux1 = 0;
+        aux2 = 0;
+
+        cout << "\n\nPlayer 1\n1-Usar arma\n";
+        cout << "2-Usar magia";
+        if(player1->mana == 0){
+            cout << " (indisponivel)\n";
+        }
+        cout << "3-Trocar de arma\n");
+        if(player1->*********** == 1){ //chance arma especial
+            cout << "4-Usar Voto Solene de Bul-Kathos\n");
+        }
+        cout << "Escolha a sua ação: ";
+        cin >> aux1;
+        if(aux1 == 1){
+            cout << "Player 1 utilizou arma: " << player1->arma->nome << "\n";
+            player2->recebeDanoDeArma(player1->ataqueArma());
+        }
+        else if(aux1 == 2){
+            cout << "Selecione a magia\n";
+            listaMagia1(player1, player2, personagem1);
+        }
+        else if(aux1 == 3){
+            cout << "Selecione a arma\n";
+            ListaDeArmas1(player1, personagem1);
+        }
+        else if(aux1 == 4){
+            player1->arma = new BulKathos();
+            player2->recebeDanoLendario(player1->ataquelendario());
+            switch(personagem1){
+                case 1:
+                player1->arma = new Porrete();
+                break;
+                case 2:
+                player1->arma = new Cajado();
+                break;
+                case 3:
+                player1->arma = new Cajado();
+                break;
+                case 4:
+                player1->arma = new Besta();
+                break;
+                case 5:
+                player1->arma = new Garra_Letal();
+                break;
+                case 6:
+                player1->arma = new Cajado();
+                break;
+                case 7:
+                player1->arma = new Garra_Letal();
+                break;
+                case 8:
+                player1->arma = new Cajado();
+                break;
+            }
+        }
+        else{cout << "Opção inválida\n";}
+        if(aux1 != 2){
+            cout << "Sua mana está regenerando\n";
+            player1->regeneraMana();
+        }
+
+
+        cout << "\n\nPlayer 1\n1-Usar arma\n";
+        cout << "2-Usar magia";
+        if(player2->mana == 0){
+            cout << " (indisponivel)\n";
+        }
+        cout << "3-Trocar de arma\n";
+        if(player2->******** == 1){
+            cout << "4-Usar Voto Solene de Bul-Kathos\n";
+        }
+        cout << "Escolha a sua ação: ";
+        cin >> aux2;
+        if(aux2 == 1){
+            cout << "Player 2 utilizou arma: " << player2->arma->nome << "\n";
+            player1->recebeDanoDeArma(player2->ataqueArma());
+        }
+        else if(aux2 == 2){
+            cout << "Selecione a magia\n";
+            listaMagia2(player2, player1, personagem2);
+        }
+        else if(aux2 == 3){
+            cout << "Selecione a arma\n";
+            ListaDeArmas2(player2, personagem2);
+        }
+        else if(aux2 == 4){
+            player2->arma = new BulKathos();
+            player1->recebeDanoLendario(player2->ataquelendario());
+            switch(personagem2){
+                case 1:
+                player2->arma = new Porrete();
+                break;
+                case 2:
+                player2->arma = new Cajado();
+                break;
+                case 3:
+                player2->arma = new Cajado();
+                break;
+                case 4:
+                player2->arma = new Besta();
+                break;
+                case 5:
+                player2->arma = new Garra_Letal();
+                break;
+                case 6:
+                player2->arma = new Cajado();
+                break;
+                case 7:
+                player2->arma = new Garra_Letal();
+                break;
+                case 8:
+                player2->arma = new Cajado();
+                break;
+            }
+        }
+        else{cout << "Opção inválida\n";}
+        if(aux2 != 2){
+            cout << "Recuperou 10 de mana\n";
+            player2->regeneraMana();
+        }
+        if(player2->vida == 0){
+            cout << "\nGANHADOR!\n----------------\nJogador 1\n----------------\n";
+        }
+        else if(player1->vida == 0){
+            cout << "\nGANHADOR!\n----------------\nJogador 2\n----------------\n";
+        }
+    }
+    while(player1->vida != 0 || player2->vida != 0);
+
+
 
     funcionalidade(player1, player2, personagem1, personagem2);
 
