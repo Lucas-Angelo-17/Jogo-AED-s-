@@ -1,5 +1,6 @@
 
 #include "personagem.cpp"
+#include "Armas.h"
 
 /* Arma::Arma(string nomeArma){
     srand(time(0));
@@ -31,7 +32,7 @@ int Arma::calculaDano(){
     
 }
 
-void ListaDeArmas1(Personagem *player1, int personagem1)
+void Arsenal(Personagem *player1, int personagem1)
 {
     //escolha de acordo com a permissão de cada classe criada 
     //NERFAR LADRÃO
@@ -91,8 +92,8 @@ void ListaDeArmas1(Personagem *player1, int personagem1)
         }
     }
     else if(personagem1 == 3){
-        printf("1-Tridente Sagrado\n");
         printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Tridente Sagrado\n");
         scanf("%d", &a);
         switch(a){
 
@@ -106,8 +107,8 @@ void ListaDeArmas1(Personagem *player1, int personagem1)
         }
     }
     else if(personagem1 == 4){
-        printf("1-Tridente Sagrado\n");
         printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Tridente Sagrado\n");
         scanf("%d", &a);
         switch(a){
 
@@ -121,8 +122,8 @@ void ListaDeArmas1(Personagem *player1, int personagem1)
         }
     }
     else if(personagem1 == 5){
-        printf("1-Esfera de ataque\n");
         printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Esfera de ataque\n");
         scanf("%d", &a);
         switch(a){
 
@@ -136,8 +137,8 @@ void ListaDeArmas1(Personagem *player1, int personagem1)
         }
     }
     else if(personagem1 == 6){
-        printf("1-Porrete\n");
         printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Porrete\n");
         scanf("%d", &a);
         switch(a){
 
@@ -151,8 +152,8 @@ void ListaDeArmas1(Personagem *player1, int personagem1)
         }
     }
     else if(personagem1 == 7){
-        printf("1-Esfera de ataque\n");
         printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Esfera de ataque\n");
         scanf("%d", &a);
         switch(a){
 
@@ -166,9 +167,9 @@ void ListaDeArmas1(Personagem *player1, int personagem1)
         }
     }
     else if(personagem1 == 8){
+        printf("*ARSENAL DE SUA CLASSE*: ");
         printf("1-Porrete\n");
         printf("2- Garra Letal\n");
-        printf("*ARSENAL DE SUA CLASSE*: ");
         scanf("%d", &a);
         switch(a){
 

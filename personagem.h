@@ -7,7 +7,7 @@
 
 using namespace std;
 class Personagem{
-    public:
+    private:
     string classe;
     string nome;
     int vida;
@@ -20,17 +20,19 @@ class Personagem{
     Arma *arma;
     Magia *magia;
     int calculaEsquiva ();
-
+    int criticoBulKhatos();
+    int calculadadoBulKhatos();
+    
+    public:
     Personagem(string classePersonagem);
     int ataqueArma();
     int ataqueMagia(int dano);
     int recebeDanoDeArma(int dano);
     int recebeDanoDeMagia(int dano);
     int verificaVida();
+    ~Personagem();
     void regeneraMana();
     void regeneraVida(int regen);
     void gastaMana(int gasta);
     int verificaMana();
-    ~Personagem();
-    
 };

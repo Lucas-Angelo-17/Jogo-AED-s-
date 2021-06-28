@@ -86,6 +86,23 @@ Personagem::~Personagem(){
     cout << "\n*** Destroi os dados de personagem ***\n";
 }
 
+Personagem::calculadadoBulKhatos(){
+
+    return (500 + (rand() %(900 - 500 + 1)));
+
+}
+
+Personagem::criticoBulKhatos(){
+
+    int critico = (rand() % 100) + 1;
+    if(critico <= 30)
+        return 1;
+    else
+        return 0;
+
+    return
+}
+
 
 void Personagem::regeneraMana(){
     this->mana += 10;
