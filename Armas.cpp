@@ -1,8 +1,4 @@
-#include "Armas.h"
-<<<<<<< HEAD
-
-=======
->>>>>>> 5888730300af265f1beb5b9209130988f3107014
+#include "armas.h"
 #include "personagem.cpp"
 
 Arma::Arma(string nomeArma){

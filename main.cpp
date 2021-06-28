@@ -33,7 +33,7 @@ if(player2->verificaVida()==0)
 cout << "Morreu";
 }
 
-int main {
+int main() {
     //Intodução
     printf("Role Play Game -Classic- \n");
     printf ("****************************\n");
@@ -148,5 +148,98 @@ int main {
     }while(personagem2 <= 0 || 8 < personagem2);
 
     funcionalidade(player1, player2, personagem1, personagem2);
-}
 
+    //quando a vida de um deles chegar a zero
+    cout << "\n\nGame over?" << "\n\n" << "RAAAAAWRM" << "\n-Um dragao celestial aparece-";
+    
+    cout << "\n\nO vencedor do duelo em prantos se questiona se valeu a pena matar sem motivo";
+    cout << "\nVoce mexe no bolso e encontra uma porcao de reviver.\nCom medo de nao conseguir derrotar o dragao, pensa se vale a pena reviver seu antigo inimigo";
+    //se player1 tiver ganhado
+    if (player2->vida < 0)
+    {
+        cout << "\n\nPlayer1: Voce deseja reviver o Player2?\nDigite s para reviver ou n para nao: ";
+    }
+    else //se player2 tiver ganhado
+    {
+        cout << "\n\nPlayer2: Voce deseja reviver o Player1?\nDigite s para reviver ou n para nao: ";
+    }
+    
+    char resposta;
+    string habilidadeEspecial, habilidadeFusao;
+    int i, j, k; 
+    i = j = k = 0;
+    cin >> resposta;
+    while(i==0){
+        switch(resposta){
+            case 's':
+                i=1;
+                cout << "\n\nVoce o revive e descobre uma habilidade oculta.\n\nNova habilidade desbloqueada: SUPER FUSAO";
+                break;
+            case 'n':
+                i=1;
+                cout << "\nVoce nao o revive e descobre a vazia e triste vida sem um companheiro de batalha.\nVoce pensa por algum momento";
+                int tempo = clock();
+                while(clock() - tempo < 2500){}
+                cout << "\nEntao decide mudar de ideia e o revive.";
+                break;
+            default:
+                cout << "\nValor invalido, digite novamente: ";
+                cin >> resposta;
+                break;
+        }
+    }
+    while(j==0){
+        cout << "\nDigite FUSAO para usar a habilidade ou FUGIR para tentar escapar deste formidavel dragao: ";
+        cin >> habilidadeEspecial;
+        if (habilidadeEspecial == "FUSAO")
+        {
+            j=1;
+            cout << "\n\nFUSAAAAAAO\n\nOs 2 se encostam e se transformam em uma forma suprema e poderosa";
+            cout << "\n\nO dragao logo cria uma oscilacao estelar, formando um disco em expansão, que explode";
+            int tempo = clock();
+            while(clock() - tempo < 2500){}
+            cout << "\n\nVoces ficam atordoados mas conseguem se manter em pe.";
+            cout << "\nCom a habilidade da fusao voces conseguem acumular chakra suficiente para usar um grande poder.";
+            cout << "\n\nDigite GOMU para usar a habilidade de borracha ou RASENGAN para usar a habilidade de vento\n";
+            cin >> habilidadeFusao;
+            while(k==0){
+                if(habilidadeFusao == "GOMU"){
+                    k=1;
+                    cout << "\nVoces acumulam haki em suas maos, as esticam e lancam seu poder\nGOMU GOMU NOOO PISTOL\nO PODEROSO SOCO DE BORRACHA COM HAKI ESMAGA O DRAGAO\n";
+                    cout << "\nParabens, inimigo derrotado\nGG! Fim de jogo!\n";
+                    return 0;
+                }
+                else if(habilidadeFusao == "RASENGAN"){
+                    k=1;
+                    cout << "\nVoces manipulam o chakra puro em forma de espiral e lanca contra o inimigo\nRASENGAAAN\nO ataque atinge o dragao";
+                    cout << "\nO ataque nao foi efetivo e o inimigo lanca uma explosao de puro fogo estelar.";
+                    cout << "\nVoces morreram!\nFim de jogo!\n";
+                    return 0;
+                }
+                else{
+                    cout << "\nValor invalido, digite novamente: ";
+                }
+            }
+        }
+        else if(habilidadeEspecial == "FUGIR"){
+            j=1;
+            cout << "\n\nVoces tentam fugir, mas o dragao possui um poder implacavel e os persegue na velocidade de um cometa lendario.\n";
+            cout << "\nAo longe aparece um pessoa, mas nao parece ser uma pessoa qualquer.";
+            int tempo = clock();
+            while(clock() - tempo < 2000){}
+            cout << "\nYare yare daze...";
+            tempo = 0;
+            tempo = clock();
+            while(clock() - tempo < 2000){}
+            cout << "\nEu Jotaro irei salva-los.\nEntao JoJo mostra seu poder de stand e ataca o inimigo impiedosamente\nORA ORA ORA ORA ORA\nEntao ele derrota o dragao e voces sae vivos dessa.";
+            tempo = 0;
+            tempo = clock();
+            while(clock() - tempo < 2000){}
+            cout << "\n\nParabens, inimigo derrotado\nGG! Fim de jogo!\n";
+            return 0;
+        }
+        else{
+            cout << "\nValor invalido, tente novamente";
+        }
+    }
+}
