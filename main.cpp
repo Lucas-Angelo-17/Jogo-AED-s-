@@ -335,7 +335,7 @@ void Arsenal2(Personagem *player2, int personagem2){
             printf("Opção inválida\n");
         }
     }
-
+}
 int main(){
     //Intodução
     printf("Role Play Game -Classic- \n");
