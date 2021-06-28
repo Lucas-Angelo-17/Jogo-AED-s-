@@ -1,4 +1,4 @@
-#include "Armas.h"
+
 #include "personagem.cpp"
 
 /* Arma::Arma(string nomeArma){

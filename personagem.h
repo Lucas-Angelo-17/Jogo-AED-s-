@@ -7,7 +7,7 @@
 
 using namespace std;
 class Personagem{
-    private:
+    public:
     string classe;
     string nome;
     int vida;
@@ -20,8 +20,7 @@ class Personagem{
     Arma *arma;
     Magia *magia;
     int calculaEsquiva ();
-    
-    public:
+
     Personagem(string classePersonagem);
     int ataqueArma();
     int ataqueMagia(int dano);

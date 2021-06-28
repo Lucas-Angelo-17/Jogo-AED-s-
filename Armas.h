@@ -16,6 +16,6 @@ class Arma{
         
     public:
         Arma(string nomeArma);
-        int caculaDano;
+        int caculaDano();
         ~Arma;
 };

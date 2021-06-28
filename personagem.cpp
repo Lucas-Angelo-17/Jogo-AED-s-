@@ -24,9 +24,9 @@ int Personagem::calculaEsquiva(){
     //usar pontos de agilidade
     int esquiva = (rand() % 100) + 1;
     if(esquiva <= this.agilidade)
-    return 1;
+        return 1;
     else
-    return 0;
+        return 0;
 }
 
 int Personagem::recebeDanoDeArma(int dano){
