@@ -3,9 +3,7 @@
 #include <ctime>
 
 #include <string.h>
-#include "accessdata.h"
 #include "magias.cpp"
-#include "BancoDeDados.h"
 
 using namespace std;
 
@@ -26,7 +24,319 @@ void statusplayer2(Personagem *player2)
     printf("Mana Atual:%d\n\n", player2->mana);
 }
 
-int main() {
+void Arsenal(Personagem *player1, int personagem1)
+{
+    //escolha de acordo com a permissão de cada classe criada
+    //NERFAR LADRÃO
+
+    int a = 0;
+    if(personagem1 == 1){
+        printf("*ARSENAL DE SUA CLASSE*: \n");
+        scanf("%d", &a);
+        printf("1-Espada Barroca\n");
+        printf("2-Porrete\n");
+        switch(a){
+
+            case 1:
+            player1->arma = new Espada_Barroca();
+            cout << "Nova arma: " << "Espada Barroca" << "\n";
+            break;
+
+            case 2:
+            player1->arma = new Porrete();
+            cout << "Nova arma: " << "Porrete" << "\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem1 == 2){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Besta\n");
+        printf("2-Cajado\n");
+        printf("3-Esfera de Ataque\n");
+        printf("4-Porrete\n");
+        scanf("%d", &a);
+        switch(a){
+            case 1:
+            player1->arma = new Besta();
+            cout << "Nova arma: Besta\n";
+            break;
+
+            case 2:
+            player1->arma = new Cajado();
+            cout << "Nova arma: Cajado\n";
+            break;
+
+            case 3:
+            player1->arma = new Esfera_de_ataque();
+            cout << "Nova arma: Esfera de Ataque\n";
+            break;
+
+            case 4:
+            player1->arma = new Porrete();
+            cout << "Nova arma: Porrete\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem1 == 3){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Tridente Sagrado\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player1->arma = new Tridente_Sagrado();
+            cout << "Nova arma: Tridente Sagrado\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem1 == 4){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Tridente Sagrado\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player1->arma = new Tridente_Sagrado();
+            cout << "Nova arma: Tridente Sagrado\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem1 == 5){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Esfera de ataque\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player1->arma = new Esfera_de_ataque();
+            cout << "Nova arma: Esfera de ataque\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem1 == 6){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Porrete\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player1->arma = new Porrete();
+            cout << "Nova arma: Porrete\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem1 == 7){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Esfera de ataque\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player1->arma = new Esfera_de_ataque();
+            cout << "Nova arma: Esfera de ataque\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem1 == 8){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Porrete\n");
+        printf("2- Garra Letal\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player1->arma = new Porrete();
+            cout << "Nova arma: Porrete\n";
+            break;
+
+            case 2:
+            player1->arma = new Garra_Letal();
+            cout << "Nova arma: Garra Letal\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+}
+
+void Arsenal2(Personagem *player2, int personagem2){
+    //escolha de acordo com a permissão de cada classe criada
+    //NERFAR LADRÃO
+
+    int a = 0;
+    if(personagem2 == 1){
+        printf("*ARSENAL DE SUA CLASSE*: \n");
+        scanf("%d", &a);
+        printf("1-Espada Barroca\n");
+        printf("2-Porrete\n");
+        switch(a){
+
+            case 1:
+            player2->arma = new Espada_Barroca();
+            cout << "Nova arma: Espada Barroca\n";
+            break;
+
+            case 2:
+            player2->arma = new Porrete();
+            cout << "Nova arma: Porrete\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem2 == 2){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Besta\n");
+        printf("2-Cajado\n");
+        printf("3-Esfera de Ataque\n");
+        printf("4-Porrete\n");
+        scanf("%d", &a);
+        switch(a){
+            case 1:
+            player2->arma = new Besta();
+            cout << "Nova arma: Besta\n";
+            break;
+
+            case 2:
+            player2->arma = new Cajado();
+            cout << "Nova arma: Cajado\n";
+            break;
+
+            case 3:
+            player2->arma = new Esfera_de_ataque();
+            cout << "Nova arma: Esfera de Ataque\n";
+            break;
+
+            case 4:
+            player2->arma = new Porrete();
+            cout << "Nova arma: Porrete\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem2 == 3){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Tridente Sagrado\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player1->arma = new Tridente_Sagrado();
+            cout << "Nova arma: Tridente Sagrado\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem2 == 4){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Tridente Sagrado\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player2->arma = new Tridente_Sagrado();
+            cout << "Nova arma: Tridente Sagrado\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem2 == 5){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Esfera de ataque\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player2->arma = new Esfera_de_ataque();
+            cout << "Nova arma: Esfera de ataque \n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem2 == 6){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Porrete\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player2->arma = new Porrete();
+            cout << "Nova arma: Porrete\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem2 == 7){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Esfera de ataque\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player2->arma = new Esfera_de_ataque();
+            cout << "Nova arma: Esfera de ataque\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+    else if(personagem2 == 8){
+        printf("*ARSENAL DE SUA CLASSE*: ");
+        printf("1-Porrete\n");
+        printf("2- Garra Letal\n");
+        scanf("%d", &a);
+        switch(a){
+
+            case 1:
+            player2->arma = new Porrete();
+            cout << "Nova arma: Porrete\n";
+            break;
+
+            case 2:
+            player2->arma = new Garra_Letal();
+            cout << "Nova arma: Garra Letal\n";
+            break;
+
+            default:
+            printf("Opção inválida\n");
+        }
+    }
+
+int main(){
     //Intodução
     printf("Role Play Game -Classic- \n");
     printf ("****************************\n");
@@ -89,7 +399,7 @@ int main() {
             printf("*Zumbi*\n");
             player1 = new Zumbi();
             break;
-        
+
         default:
             printf("Opção inválida\n");
             break;
@@ -133,7 +443,7 @@ int main() {
             printf("*Zumbi*\n");
             player2 = new Zumbi();
             break;
-        
+
         default:
             printf("Opção inválida\n");
             break;
@@ -150,14 +460,14 @@ int main() {
         if(player1->mana == 0){
             cout << " (indisponivel)\n";
         }
-        cout << "3-Trocar de arma\n");
+        cout << "3-Trocar de arma\n";
         if(player1->*********** == 1){ //chance arma especial
-            cout << "4-Usar Voto Solene de Bul-Kathos\n");
+            cout << "4-Usar Voto Solene de Bul-Kathos\n";
         }
         cout << "Escolha a sua ação: ";
         cin >> aux1;
         if(aux1 == 1){
-            cout << "Player 1 utilizou arma: " << player1->arma->nome << "\n";
+            cout << "Player 1 utilizou arma\n";
             player2->recebeDanoDeArma(player1->ataqueArma());
         }
         else if(aux1 == 2){
@@ -177,7 +487,7 @@ int main() {
             cout << "Recuperou 10 de mana\n";
             player1->regeneraMana();
         }
-       
+
         cout << statusplayer1 << statusplayer2;
 
         cout << "\n\nPlayer 2\n1-Usar arma\n";
@@ -192,7 +502,7 @@ int main() {
         cout << "Escolha a sua ação: ";
         cin >> aux2;
         if(aux2 == 1){
-            cout << "Player 2 utilizou arma: " << player2->arma->nome << "\n";
+            cout << "Player 2 utilizou arma\n";
             player1->recebeDanoDeArma(player2->ataqueArma());
         }
         else if(aux2 == 2){
@@ -224,7 +534,7 @@ int main() {
 
     //quando a vida de um deles chegar a zero
     cout << "\n\nGame over?" << "\n\n" << "RAAAAAWRM" << "\n-Um dragao celestial aparece-";
-    
+
     cout << "\n\nO vencedor do duelo em prantos se questiona se valeu a pena matar sem motivo";
     cout << "\nVoce mexe no bolso e encontra uma porcao de reviver.\nCom medo de nao conseguir derrotar o dragao, pensa se vale a pena reviver seu antigo inimigo";
     //se player1 tiver ganhado
@@ -236,10 +546,10 @@ int main() {
     {
         cout << "\n\nPlayer2: Voce deseja reviver o Player1?\nDigite s para reviver ou n para nao: ";
     }
-    
+
     char resposta;
     string habilidadeEspecial, habilidadeFusao;
-    int i, j, k; 
+    int i, j, k;
     i = j = k = 0;
     cin >> resposta;
     while(i==0){
@@ -315,4 +625,5 @@ int main() {
             cout << "\nValor invalido, tente novamente";
         }
     }
+    return 0;
 }

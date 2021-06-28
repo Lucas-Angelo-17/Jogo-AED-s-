@@ -1,4 +1,4 @@
-#include "magias.h"
+
 #include "personagem.cpp"
 
 void listaMagia1(Personagem *player1, Personagem *player2, int personagem1){
@@ -6,7 +6,7 @@ void listaMagia1(Personagem *player1, Personagem *player2, int personagem1){
     int dano = 0, mana = 0, cura = 0;
     switch(personagem1){
         case 1:
-            cout << "Escolha a Magia: " << "\n" << "1-Tempestade" << "\n";
+            cout << "Escolha a Magia: n1-Tempestade" << "\n";
             cin >> magia;
             switch(magia){
                 case 1:
@@ -19,7 +19,7 @@ void listaMagia1(Personagem *player1, Personagem *player2, int personagem1){
             }
             break;
         case 2:
-            cout << "Escolha a Magia: " << "\n" << "1-Intoxicação" << "\n";
+            cout << "Escolha a Magia\n1-Intoxicação" << "\n";
             cin >> magia;
             switch(magia){
                 case 1:
